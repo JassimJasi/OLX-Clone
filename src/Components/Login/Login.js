@@ -9,6 +9,7 @@ function Login() {
   const [email, setEmail] = useState('')
   const [password, setPAssword] = useState('')
   const [loading, setLoading] = useState(false)
+  const [errMes, setErrMes] = useState(null);
   const {firebase} = useContext(FirebaseContext)
   const history = useHistory()
   const handleLogin = (e) => {
@@ -17,14 +18,16 @@ function Login() {
   firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
     history.push('/')
   }).catch((error)=>{
-    alert(error.message)
+    setLoading(false)
+    setErrMes(error.message)
   })
   }
   return (<>
     {loading && <RoundLoading />}
     <div>
       <div className="loginParentDiv">
-        <img width="200px" height="200px" src={Logo}></img>
+        <img width="200px" height="200px" src={Logo} alt="logo..."></img>
+        <p className='errorMessage'>{errMes}</p>
         <form onSubmit={handleLogin}>
           <label htmlFor="fname">Email</label>
           <br />
@@ -53,7 +56,7 @@ function Login() {
           <br />
           <button>Login</button>
         </form>
-        <a onClick={()=>{
+        <a href='/signup' onClick={()=>{
           history.push('/signup')
         }}>Signup</a>
       </div>

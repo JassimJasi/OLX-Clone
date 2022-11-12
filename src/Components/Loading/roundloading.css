@@ -1,15 +1,17 @@
 .round-loader-container {
+    opacity: 1;
     margin: 0;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#1b41422d;
+    background-color: #122828a8;
     overflow: hidden;
-   padding-bottom: 7em;
+    padding-bottom: 7em;
 }
 
 .round-loader {
+
     width: 5em;
     height: 5em;
     font-size: 25px;
@@ -19,7 +21,7 @@
     position: relative;
     animation: rotating 2s ease-in-out infinite;
     --direction: 1;
-    
+    overflow: hidden;
 }
 
 .round-loader::before,
@@ -44,6 +46,7 @@
 }
 
 .round-loader span {
+    opacity: 999;
     position: absolute;
     color: hotpink;
     width: inherit;

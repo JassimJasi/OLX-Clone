@@ -45,6 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow-y: hidden;
 }
 
 .productSearch .input {
@@ -186,12 +187,13 @@ div[role='menu'].visible {
   position: absolute;
   background-color: #fff;
   width: 65px;
-  height: 65px;
+  height: 165px;
   border-radius: 3px;
   border: 1px solid;
   text-align: center;
   box-shadow: 1px 1px #888888;
   cursor: pointer;
+  opacity: 1;
 }
 .dropBtnLogin{
   direction: none;

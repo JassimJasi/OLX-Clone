@@ -17,7 +17,6 @@ const Create = () => {
   const handleSubmit = () => {
     firebase.storage().ref(`/image/${image.name}`).put(image).then(({ ref }) => {
       ref.getDownloadURL().then((url) => {
-        console.log(url);
         firebase.firestore().collection('products').add({
           name,
           category,

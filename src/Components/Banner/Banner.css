@@ -17,6 +17,7 @@
 }
 
 .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions {
+  overflow: hidden;
 }
 .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
   padding: 10px;

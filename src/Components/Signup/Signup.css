@@ -42,3 +42,7 @@
     text-decoration: none;
     color: black;
   }
+  .errorMessage{
+    color: red;
+    max-width: 230px;
+  }

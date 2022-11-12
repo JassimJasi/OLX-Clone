@@ -11,6 +11,7 @@ export default function Signup() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
+  const [errMes, setErrMes] = useState("");
   const [loading, setLoading] = useState(false)
   const {firebase} = useContext(FirebaseContext)
   const handleSubmit =(e)=>{
@@ -28,7 +29,7 @@ export default function Signup() {
       })
     }).catch((error)=>{
       setLoading(false)
-      alert(error.message)
+      setErrMes(error.message)
     })
   }
 
@@ -36,7 +37,8 @@ export default function Signup() {
   {loading && <RoundLoading />}
     <div>
       <div className="signupParentDiv">
-        <img width="200px" height="200px" src={Logo}></img>
+        <img width="200px" height="200px" src={Logo} alt="logo..."></img>
+        <p className='errorMessage'>{errMes}</p>
         <form onSubmit={handleSubmit}>
           <label htmlFor="fname">Username</label>
           <br />

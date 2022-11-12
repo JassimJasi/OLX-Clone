@@ -27,10 +27,12 @@
 
 .moreView .cards {
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
-
+.card::-webkit-scrollbar{
+  display: none;
+}
 .card {
   margin-right: 15px;
   padding: 13px;
@@ -39,6 +41,7 @@
   height: 270px;
   display: inline-block;
   cursor: pointer;
+  overflow-y: hidden;
 }
 
 .card .favorite {

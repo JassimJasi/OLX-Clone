@@ -25,7 +25,7 @@ function Header() {
           <OlxLogo ></OlxLogo>
         </div>
         <div className="placeSearch" onClick={()=>{
-          alert("Something Wrong")
+          alert("Coming Soon")
         }}>
           <Search></Search>
           <input type="text" value={'Palakkad,Kerala'} />
@@ -38,7 +38,9 @@ function Header() {
               placeholder="Find car,mobile phone and more..."
             />
           </div>
-          <div className="searchAction">
+          <div className="searchAction"  onClick={()=>{
+          alert("Coming Soon")
+        }}>
             <Search color="#ffffff"></Search>
           </div>
         </div>

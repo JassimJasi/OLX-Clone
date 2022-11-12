@@ -14,6 +14,7 @@ function View() {
         setUserDetails(doc.data())
       });
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
   return (
@@ -26,7 +27,7 @@ function View() {
       </div>
       <div className="rightSection">
         <div className="productDetails">
-          <p>&#x20B9; {postDetails.price} </p>
+          <p className='priceTag'>&#x20B9; {postDetails.price} </p>
           <span>{postDetails.name}</span>
           <p>{postDetails.category}</p>
           <span>{postDetails.createdAt}</span>

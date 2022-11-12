@@ -17,6 +17,7 @@
 }
 
 .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions {
+  overflow: hidden;
 }
 .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
   padding: 10px;
@@ -30,6 +31,7 @@
 @media only screen and (max-width: 700px) {
   .otherQuickOptions {
     display: none;
+    
   }
   .bannerChildDiv .banner {
     position: relative;

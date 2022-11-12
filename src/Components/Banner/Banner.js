@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import DynamicPosts from "../DynamicPosts/DynamicPosts";
-
 import './Banner.css';
-import Arrow from '../../assets/Arrow';
-import useDropdownMenu from 'react-accessible-dropdown-menu-hook';
+// import Arrow from '../../assets/Arrow';
+// import useDropdownMenu from 'react-accessible-dropdown-menu-hook';
 
 function Banner() {
   let [category, setCategory] = useState();

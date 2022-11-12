@@ -25,6 +25,7 @@ useEffect(()=>{
     setProducts(allPost);
     setAllPost(allPost);
   })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [setAllPost])
   return (
     <div className="postParentDiv">
